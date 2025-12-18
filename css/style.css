@@ -1,1000 +1,1599 @@
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  html,
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fafafa;
-  }
-
-
-  .navbar {
-    position: static;
-    max-width: 1200px;
-    margin-left: -200px;
-    margin-right: -200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #ffffff;
-    margin: auto;
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-    font-size: 33px;
-    font-weight: 700;
-    color: #273373;
-  }
-
-  .logo img {
-    width: 100px;
-    margin-right: 10px;
-  }
-
-  .nav-links {
-    display: flex;
-    list-style: none;
-  }
-
-  .nav-links li {
-    margin-right: 20px;
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    color: #004aad;
-    font-weight: 500;
-    transition: 0.3s ease;
-    font-size: 22px;
-  }
-
-  .nav-links a:hover,
-  .nav-links .active {
-    color: #004aad;
-    border-bottom: 4px solid #004aad;
-    padding-bottom: 3px;
-  }
-
-  .hero {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
-    text-align: center;
-    color: white;
-    position: relative;
-
-    background-image: url("../img/hero1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    border-radius: 50px;
-    overflow: hidden;
-    height: 550px;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero h1 {
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 1.3;
-  }
-
-  .hero h1 span {
-    font-size: 55px;
-  }
-
-  .hero p {
-    font-family: "DM Sans", sans-serif;
-    margin-top: 20px;
-    font-size: 24px;
-    line-height: 1.5;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .explore-btn {
-    margin-top: 35px;
-    padding: 15px 35px;
-    background: white;
-    color: #5e3573;
-    border: none;
-    border-radius: 50px;
-    font-size: 32px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-    font-family: "Poppins", sans-serif;
-    width: 350px;
-    height: 90px;
-  }
-
-  .explore-btn:hover {
-    transform: scale(1.05);
-  }
-
-  .reasons-section {
-    max-width: 1000px;
-    margin: 40px auto;
-    height: 550px;
-
-    position: relative;
-    overflow: hidden;
-    border-radius: 50px;
-  }
-
-  /* gambar background */
-  .reasons-section img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .contents-section {
-    text-align: center;
-    color: white;
-  }
-
-  .contents-section img {
-    max-width: 1200px;
-    margin-left: -200px;
-    margin-right: -200px;
-    margin-bottom: 20px;
-    max-height: 200px;
-    position: relative;
-  }
-
-  .contents-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1100px;
-    margin: auto;
-  }
-
-
-  .content-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    border-radius: 1.5rem;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
-  }
-
-  .card-icon {
-    width: 130px;
-    margin-bottom: 1rem;
-  }
-
-  .details-btn {
-    margin-top: 1rem;
-    background: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 21px;
-  }
-
-  .details-btn a {
-    text-decoration: none;
-  }
-
-  .greenfont {
-    color: #278120;
-  }
-
-  .redfont {
-    color: #931212;
-  }
-
-  .bluefont {
-    color: #0624a3;
-  }
-
-  .yellowfont {
-    color: #d37b07;
-  }
-
-  .green {
-    background: linear-gradient(135deg, #278120, #8cd866);
-  }
-
-  .red {
-    background: linear-gradient(135deg, #931212, #f36060);
-  }
-
-  .yellow {
-    background: linear-gradient(135deg, #d37b07, #eae45b);
-  }
-
-  .blue {
-    background: linear-gradient(135deg, #0624a3, #5388ff);
-  }
-
-  .detailintro {
-    margin: auto;
-    text-align: center;
-    max-width: 1200px;
-  }
-
-  .detailintro-header {
-    max-width: 1200px;
-    margin-left: -200px;
-    margin-right: -200px;
-    margin-bottom: 2rem;
-    position: relative;
-    max-height: 200px;
-  }
-
-  .detailintro h1 {
-    font-size: 46px;
-    font-weight: bold;
-    line-height: 1.3;
-    color: #003764;
-    max-width: 1100px;
-    margin-bottom: 2rem;
-  }
-
-  .detailintro-article {
-    max-width: 1000px;
-    margin: auto;
-  }
-
-  .detailintro-article p {
-    font-size: 26px;
-    color: #003764;
-    text-align: justify;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-    font-family: "Open Sauce", sans-serif;
-  }
-
-  .detailintro-article h2 {
-    font-size: 35px;
-    color: #003764;
-    text-align: left;
-    margin-bottom: 2rem;
-    max-width: 1000px;
-  }
-
-  .detailintro-article img {
-    max-width: 400px;
-    margin-bottom: 2rem;
-  }
-
-  .detaildiabet {
-    margin: auto;
-    text-align: center;
-  }
-
-  .detaildiabet-header {
-    max-width: 1200px;
-    margin-left: -200px;
-    margin-right: -200px;
-    margin-bottom: 2rem;
-    position: relative;
-    max-height: 200px;
-  }
-
-  .detaildiabet-article {
-    max-width: 1100px;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-
-  .detaildiabet-article h1 {
-    font-size: 47px;
-    font-weight: bold;
-    line-height: 1.3;
-    color: #003764;
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-  }
-
-  .detaildiabet-article p {
-    font-size: 22px;
-    color: #000000;
-    text-align: justify;
-    max-width: 1000px;
-    margin: auto;
-    font-family: "Open Sauce", sans-serif;
-  }
-
-  .diabetes-wrapper {
-    max-width: 1000px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    margin: auto;
-    text-align: justify;
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-
-  .diabetes-text {
-    flex: 1.5;
-  }
-
-  .diabetes-image {
-    flex: 1.3;
-  }
-
-  .diabetes-image img {
-    max-width: 70%;
-    display: block;
-  }
-
-  .detaildiabet-hero {
-    max-width: 650px;
-    margin-bottom: 2rem;
-  }
-
-  .detaildiabet-article ul {
-    padding-left: 20px;
-  }
-
-  .detailjuan {
-    margin: auto;
-    text-align: center;
-  }
-
-  .detailjuan-header {
-    max-width: 1200px;
-    margin-left: -200px;
-    margin-right: -200px;
-    position: relative;
-    max-height: 200px;
-  }
-
-  .chemical-section {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-  }
-
-  .molecule-card {
-    width: 320px;
-    background: linear-gradient(135deg, #d37b07, #eae45b);
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    height: 400px;
-  }
-
-  .molecule-image {
-    width: 100%;
-    background: black;
-    border-radius: 10px;
-    height: 300px;
-  }
-
-  .molecule-formula {
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    margin-top: 15px;
-  }
-
-  .properties-table h2 {
-    font-size: 44px;
-    color: #003764;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: normal;
-  }
-
-  .properties-table table {
-    width: 750px;
-    border-collapse: collapse;
-    font-size: 24px;
-    font-family: 'Open Sauce', sans-serif;
-    font-weight: normal;
-    color: #000000;
-  }
-
-  .properties-table td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .properties-table tr:last-child td {
-    border-bottom: none;
-  }
-
-  .properties-table td:first-child {
-    font-weight: 400;
-  }
-
-  .detailjuan-article {
-    max-width: 1100px;
-    margin: auto;
-  }
-
-  .detailjuan-article h1 {
-    font-size: 44px;
-    font-weight: bold;
-    line-height: 1.3;
-    color: #003764;
-    max-width: 800px;
-    margin-bottom: 4rem;
-    text-align: center;
-    margin: auto;
-  }
-
-  .detailjuan-article p {
-    font-size: 24px;
-    color: #000000;
-    text-align: justify;
-    margin-bottom: 2rem;
-  }
-
-  .glp {
-    display: flex;
-    justify-content: center;
-    max-width: 1400px;
-    margin: auto;
-    gap: 20px;
-  }
-
-  .info-left {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .box {
-    border-radius: 15px;
-  }
-
-  .box img {
-    max-width: 200px;
-  }
-
-  .box h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .steps-right {
-    display: grid;
-    grid-template-columns: repeat(3, 300px);
-    gap: 40px;
-    width: 1000px;
-    justify-content: center;
-  }
-
-  .step {
-    width: 300px;
-    text-align: center;
-  }
-
-  .step img {
-    width: 200px;
-    height: auto;
-    display: block;
-    margin: auto;
-  }
-
-  .step-btn {
-    margin-top: 10px;
-    padding: 12px 20px;
-    border: none;
-    background: linear-gradient(to right, #d37b07, #eae45b);
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: 0.3s;
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    width: 300px;
-    height: 90px;
-  }
-
-  .step-btn:hover {
-    transform: scale(1.05);
-  }
-
-  .popup {
-    text-align: left;
-    display: none;
-    margin-top: 10px;
-    padding: 15px;
-    background: white;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    font-size: 15px;
-    line-height: 1.4;
-  }
-
-  .other-section {
-    text-align: center;
-    padding: 20px;
-    color: white;
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .card-container {
-    display: flex;
-    max-width: 1100px;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: auto;
-  }
-
-  .card {
-    background: linear-gradient(135deg, #0624a3, #5388ff);
-    width: 265px;
-    padding: 20px;
-    border-radius: 25px;
-    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
-    text-align: center;
-  }
-
-  .card-inframe {
-    width: 100%;
-    height: 300px;
-    background-color: #000000;
-    object-fit: contain;
-    border-radius: 15px;
-  }
-
-  .card h3 {
-    font-size: 30px;
-    margin: 15px 0;
-    font-weight: bold;
-    font-family: 'Poppins' sans-serif;
-  }
-
-  .btn {
-    display: inline-block;
-    background: #fff;
-    color: #0624a3;
-    padding: 10px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 22px;
-    transition: 0.3s;
-    font-family: 'Poppins' sans-serif;
-  }
-
-  .btn:hover {
-    transform: scale(1.05);
-  }
-
-  .detail-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    padding: 80px 60px;
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .detail-card {
-    max-width: 400px;
-    background: linear-gradient(135deg, #0624a3, #5388ff);
-    padding: 25px;
-    border-radius: 25px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    text-align: center;
-  }
-
-  .detail-img {
-    background: #000;
-    border-radius: 20px;
-    padding: 15px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    object-fit: contain;
-  }
-
-  .detail-card-title {
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
-    margin-top: 18px;
-  }
-
-  .detail-divider {
-    width: 80%;
-    height: 5px;
-    background: #004aad;
-    margin: 12px auto;
-    border-radius: 10px;
-  }
-
-  .detail-formula {
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
-
-  .detail-content {
-    max-width: 700px;
-    text-align: justify;
-  }
-
-  .detail-title {
-    font-size: 44px;
-    color: #003e7e;
-    margin-bottom: 5px;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Poppins' sans-serif;
-  }
-
-  .detail-subtitle {
-    color: #0056a9;
-    font-size: 19px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: 'Poppins' sans-serif;
-  }
-
-  .detail-paragraph {
-    font-size: 26px;
-    line-height: 1.5;
-    margin-bottom: 18px;
-    color: #222;
-    font-family: 'Open Sauce' sans-serif;
-  }
-
-  .detail-list {
-    margin-left: 20px;
-    font-size: 26px;
-    line-height: 1.5;
-    font-family: 'Open Sauce' sans-serif;
-  }
-
-  .detail-list li {
-    margin-bottom: 10px;
-  }
-
-  .games-grid {
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(2, 550px);
-    gap: 30px;
-    justify-content: center;
-    margin: auto;
-    margin-top: 20px;
-  }
-
-  .game-card {
-    border-radius: 26px;
-    cursor: pointer;
-    transition: transform .2s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .game-card:hover {
-    transform: translateY(-6px);
-  }
-
-  .game-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .quiz-container {
-    max-width: 1000px;
-    text-align: center;
-    padding: 20px;
-    margin: auto;
-  }
-
-  .quiz-progress {
-    background: #003764;
-    color: white;
-    padding: 8px 22px;
-    border-radius: 30px;
-    font-size: 23px;
-    font-weight: 700;
-    display: inline-block;
-    margin-bottom: 25px;
-  }
-
-  .quiz-question {
-    font-size: 46px;
-    font-weight: 700;
-    color: #003764;
-    margin-bottom: 40px;
-    line-height: 1.3;
-  }
-
-  .quiz-options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .option {
-    width: 450px;
-    height: 120px;
-    padding: 25px;
-    border: none;
-    border-radius: 25px;
-    font-size: 22px;
-    font-weight: 700;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.15s ease;
-    line-height: 1.4;
-  }
-
-  .option:hover {
-    transform: translateY(-6px);
-  }
-
-  .quiz-status {
-    margin-top: 25px;
-    font-size: 24px;
-    font-weight: 700;
-  }
-
-  .quiz-next {
-    margin-top: 25px;
-    display: none;
-    background: #006aff;
-    color: white;
-    padding: 12px 28px;
-    border-radius: 12px;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: 600;
-  }
-
-  .quiz-next:hover {
-    opacity: 0.8;
-  }
-
-  .option:nth-child(1) {
-    background: linear-gradient(90deg, #2f9e44, #8cd46a);
-  }
-
-  .option:nth-child(2) {
-    background: linear-gradient(90deg, #d79a00, #f1d36a);
-  }
-
-  .option:nth-child(3) {
-    background: linear-gradient(90deg, #d63939, #ff7b7b);
-  }
-
-  .option:nth-child(4) {
-    background: linear-gradient(90deg, #0353e9, #4e8aff);
-  }
-
-  .about-section {
-    color: white;
-    text-align: center;
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .about-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 1100px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    gap: 50px
-  }
-
-  .about-box {
-    color: #ffffff;
-    padding: 35px;
-    border-radius: 30px;
-    max-width: 500px;
-    max-height: 650px;
-    font-size: 21px;
-    line-height: 1.5;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, #273373, #794e8f);
-    font-family: 'Open Sauce', sans-serif;
-  }
-
-  .vision-box {
-    max-width: 550px;
-    color: #0a2b5a;
-    text-align: justify;
-    font-size: 21px;
-    line-height: 1.5;
-    font-family: 'Open Sauce', sans-serif;
-  }
-
-  .about-box h2 {
-    font-size: 38px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .vision-box h1 {
-    font-size: 44px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #003764;
-    font-family: 'Poppins', sans-serif;
-    text-align: left;
-  }
-
-  .info-section {
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .info-container {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 50px;
-    flex-wrap: wrap;
-  }
-
-  .info-card {
-    padding: 35px;
-    border-radius: 35px;
-    color: white;
-    line-height: 1.5;
-    font-size: 21px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  .left-card {
-    background: linear-gradient(135deg, #273373, #794e8f);
-    width: 525px;
-  }
-
-  .right-card {
-    background: linear-gradient(135deg, #273373, #794e8f);
-    width: 525px;
-  }
-
-  .left-card p {
-    font-family: 'Open Sauce', sans-serif;
-  }
-
-  .right-card strong {
-    font-family: 'Open Sauce', sans-serif;
-    font-weight: 700;
-  }
-
-  .info-card h2 {
-    font-size: 33px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .info-card ul {
-    padding-left: 20px;
-  }
-
-  .info-card li {
-    margin-bottom: 21px;
-    font-family: 'Open Sauce', sans-serif;
-  }
-
-  @font-face {
-    font-family: "DM Sans";
-    src: url("../font/DMSans-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "DM Sans";
-    src: url("../font/DMSans-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "DM Sans";
-    src: url("../font/DMSans-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Open Sauce";
-    src: url("../font/OpenSauceSans-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Open Sauce";
-    src: url("../font/OpenSauceSans-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Open Sauce";
-    src: url("../font/OpenSauceSans-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Poppins";
-    src: url("../font/Poppins-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Poppins";
-    src: url("../font/Poppins-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Poppins";
-    src: url("../font/Poppins-SemiBold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Poppins";
-    src: url("../font/Poppins-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-  }
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html,
+    body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fafafa;
+        padding-bottom: 0px;
+    }
+
+    .navbar {
+        position: static;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: #ffffff;
+        margin: auto;
+    }
+
+    .navbar,
+    .contents-section img,
+    .detailintro-header,
+    .detaildiabet-header,
+    .detailjuan-header {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 33px;
+        font-weight: 700;
+        color: #273373;
+    }
+
+    .logo img {
+        width: 100px;
+        margin-right: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-links li {
+        margin-right: 20px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #004aad;
+        font-weight: 500;
+        transition: 0.3s ease;
+        font-size: 22px;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+        color: #004aad;
+        border-bottom: 4px solid #004aad;
+        padding-bottom: 3px;
+    }
+
+    .hero {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 60px 30px;
+        text-align: center;
+        color: white;
+        position: relative;
+
+        background-image: url("../img/hero1.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        border-radius: 40px;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        z-index: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero h1 {
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    .hero h1 span {
+        font-size: 55px;
+    }
+
+    .hero p {
+        font-family: "DM Sans", sans-serif;
+        margin-top: 20px;
+        font-size: 24px;
+        line-height: 1.5;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .explore-btn {
+        margin-top: 35px;
+        padding: 15px 35px;
+        background: white;
+        color: #5e3573;
+        border: none;
+        border-radius: 50px;
+        font-size: 32px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+        font-family: "Poppins", sans-serif;
+        width: 350px;
+        height: 90px;
+    }
+
+    .explore-btn:hover {
+        transform: scale(1.05);
+    }
+
+    .reasons-section {
+        max-width: 1000px;
+        margin: 20px auto;
+        border-radius: 30px;
+
+        background-image: url("/img/hero2.png");
+        background-size: contain;
+        /* ⬅️ INI KUNCI */
+        background-repeat: no-repeat;
+        background-position: center;
+
+        aspect-ratio: 16 / 9;
+        /* responsive */
+        width: 93%;
+    }
+
+
+    /* gambar background */
+    .reasons-section img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .contents-section {
+        padding-bottom: 10px;
+        text-align: center;
+        color: white;
+    }
+
+    .contents-section img {
+        max-width: 1200px;
+        margin-left: -200px;
+        margin-right: -200px;
+        margin-bottom: 20px;
+        max-height: 200px;
+        position: relative;
+    }
+
+    .contents-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1100px;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+
+    .content-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        border-radius: 1.5rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        color: white;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .card-icon {
+        width: 130px;
+        margin-bottom: 1rem;
+    }
+
+    .details-btn {
+        margin-top: 1rem;
+        background: white;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 21px;
+    }
+
+    .details-btn a {
+        text-decoration: none;
+    }
+
+    .greenfont {
+        color: #278120;
+    }
+
+    .redfont {
+        color: #931212;
+    }
+
+    .bluefont {
+        color: #0624a3;
+    }
+
+    .yellowfont {
+        color: #d37b07;
+    }
+
+    .green {
+        background: linear-gradient(135deg, #278120, #8cd866);
+    }
+
+    .red {
+        background: linear-gradient(135deg, #931212, #f36060);
+    }
+
+    .yellow {
+        background: linear-gradient(135deg, #d37b07, #eae45b);
+    }
+
+    .blue {
+        background: linear-gradient(135deg, #0624a3, #5388ff);
+    }
+
+    .detailintro {
+        margin: auto;
+        text-align: center;
+        max-width: 1200px;
+    }
+
+    .detailintro-header {
+        max-width: 1200px;
+        margin-left: -200px;
+        margin-right: -200px;
+        margin-bottom: 2rem;
+        position: relative;
+        max-height: 200px;
+    }
+
+    .detailintro h1 {
+        font-size: 46px;
+        font-weight: bold;
+        line-height: 1.3;
+        color: #003764;
+        max-width: 1100px;
+        margin-bottom: 2rem;
+    }
+
+    .detailintro-article {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .detailintro-article p {
+        font-size: 26px;
+        color: #003764;
+        text-align: justify;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        font-family: "Open Sauce", sans-serif;
+    }
+
+    .detailintro-article h2 {
+        font-size: 35px;
+        color: #003764;
+        text-align: left;
+        margin-bottom: 2rem;
+        max-width: 1000px;
+    }
+
+    .detailintro-article img {
+        max-width: 400px;
+        margin-bottom: 2rem;
+    }
+
+    .detaildiabet {
+        margin: auto;
+        text-align: center;
+    }
+
+    .detaildiabet-header {
+        max-width: 1200px;
+        margin-left: -200px;
+        margin-right: -200px;
+        margin-bottom: 2rem;
+        position: relative;
+        max-height: 200px;
+    }
+
+    .detaildiabet-article {
+        max-width: 1100px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .detaildiabet-article h1 {
+        font-size: 47px;
+        font-weight: bold;
+        line-height: 1.3;
+        color: #003764;
+        max-width: 1000px;
+        margin: auto;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .detaildiabet-article p {
+        font-size: 22px;
+        color: #000000;
+        text-align: justify;
+        max-width: 1000px;
+        margin: auto;
+        font-family: "Open Sauce", sans-serif;
+    }
+
+    .diabetes-wrapper {
+        max-width: 1000px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin: auto;
+        text-align: justify;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .diabetes-text {
+        flex: 1.5;
+    }
+
+    .diabetes-image {
+        flex: 1.3;
+    }
+
+    .diabetes-image img {
+        max-width: 70%;
+        display: block;
+    }
+
+    .detaildiabet-hero {
+        max-width: 650px;
+        margin-bottom: 2rem;
+    }
+
+    .detaildiabet-article ul {
+        padding-left: 20px;
+    }
+
+    .detailjuan {
+        margin: auto;
+        text-align: center;
+    }
+
+    .detailjuan-header {
+        max-width: 1200px;
+        margin-left: -200px;
+        margin-right: -200px;
+        position: relative;
+        max-height: 200px;
+    }
+
+    .chemical-section {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .molecule-card {
+        width: 320px;
+        background: linear-gradient(135deg, #d37b07, #eae45b);
+        border-radius: 20px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        height: 400px;
+    }
+
+    .molecule-image {
+        width: 100%;
+        background: black;
+        border-radius: 10px;
+        height: 300px;
+    }
+
+    .molecule-formula {
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        margin-top: 15px;
+    }
+
+    .properties-table h2 {
+        font-size: 44px;
+        color: #003764;
+        margin-bottom: 20px;
+        font-family: "Poppins", sans-serif;
+        font-weight: normal;
+    }
+
+    .properties-table table {
+        width: 750px;
+        border-collapse: collapse;
+        font-size: 24px;
+        font-family: "Open Sauce", sans-serif;
+        font-weight: normal;
+        color: #000000;
+    }
+
+    .properties-table td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .properties-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .properties-table td:first-child {
+        font-weight: 400;
+    }
+
+    .detailjuan-article {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .detailjuan-article h1 {
+        font-size: 44px;
+        font-weight: bold;
+        line-height: 1.3;
+        color: #003764;
+        max-width: 800px;
+        margin-bottom: 4rem;
+        text-align: center;
+        margin: auto;
+    }
+
+    .detailjuan-article p {
+        font-size: 24px;
+        color: #000000;
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
+
+    .glp {
+        display: flex;
+        justify-content: center;
+        max-width: 1400px;
+        margin: auto;
+        gap: 20px;
+    }
+
+    .info-left {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .box {
+        border-radius: 15px;
+    }
+
+    .box img {
+        max-width: 200px;
+    }
+
+    .box h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .steps-right {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        gap: 40px;
+        width: 1000px;
+        justify-content: center;
+    }
+
+    .step {
+        width: 300px;
+        text-align: center;
+    }
+
+    .step img {
+        width: 200px;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
+    .step-btn {
+        margin-top: 10px;
+        padding: 12px 20px;
+        border: none;
+        background: linear-gradient(to right, #d37b07, #eae45b);
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 40px;
+        cursor: pointer;
+        transition: 0.3s;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        width: 300px;
+        height: 90px;
+    }
+
+    .step-btn:hover {
+        transform: scale(1.05);
+    }
+
+    .popup {
+        text-align: left;
+        display: none;
+        margin-top: 10px;
+        padding: 15px;
+        background: white;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .other-section {
+        text-align: center;
+        padding: 20px;
+        color: white;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .card-container {
+        display: flex;
+        max-width: 1100px;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    .card {
+        background: linear-gradient(135deg, #0624a3, #5388ff);
+        width: 265px;
+        padding: 20px;
+        border-radius: 24px;
+        box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+
+    .card img {
+        width: 80px;
+        margin-bottom: 12px;
+    }
+
+    .card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .card-inframe {
+        width: 100%;
+        height: 300px;
+        background-color: #000000;
+        object-fit: contain;
+        border-radius: 15px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+        line-height: 1.3;
+        margin: 15px 0;
+        font-weight: bold;
+        font-family: "Poppins" sans-serif;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #fff;
+        color: #0624a3;
+        padding: 10px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 22px;
+        transition: 0.3s;
+        font-family: "Poppins" sans-serif;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+    }
+
+    .detail-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 80px 60px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .detail-card {
+        max-width: 400px;
+        background: linear-gradient(135deg, #0624a3, #5388ff);
+        padding: 25px;
+        border-radius: 25px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        text-align: center;
+    }
+
+    .detail-img {
+        background: #000;
+        border-radius: 20px;
+        padding: 15px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .detail-card-title {
+        color: white;
+        font-size: 26px;
+        font-weight: bold;
+        margin-top: 18px;
+    }
+
+    .detail-divider {
+        width: 80%;
+        height: 5px;
+        background: #004aad;
+        margin: 12px auto;
+        border-radius: 10px;
+    }
+
+    .detail-formula {
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .detail-content {
+        max-width: 700px;
+        text-align: justify;
+    }
+
+    .detail-title {
+        font-size: 44px;
+        color: #003e7e;
+        margin-bottom: 5px;
+        font-weight: bold;
+        text-align: center;
+        font-family: "Poppins" sans-serif;
+    }
+
+    .detail-subtitle {
+        color: #0056a9;
+        font-size: 19px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: "Poppins" sans-serif;
+    }
+
+    .detail-paragraph {
+        font-size: 26px;
+        line-height: 1.5;
+        margin-bottom: 18px;
+        color: #222;
+        font-family: "Open Sauce" sans-serif;
+    }
+
+    .detail-list {
+        margin-left: 20px;
+        font-size: 26px;
+        line-height: 1.5;
+        font-family: "Open Sauce" sans-serif;
+    }
+
+    .detail-list li {
+        margin-bottom: 10px;
+    }
+
+    .games-grid {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(2, 550px);
+        gap: 30px;
+        justify-content: center;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .game-card {
+        border-radius: 26px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .game-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .game-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .quiz-container {
+        max-width: 1000px;
+        text-align: center;
+        padding: 20px;
+        margin: auto;
+    }
+
+    .quiz-progress {
+        background: #003764;
+        color: white;
+        padding: 8px 22px;
+        border-radius: 30px;
+        font-size: 23px;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 25px;
+    }
+
+    .quiz-question {
+        font-size: 46px;
+        font-weight: 700;
+        color: #003764;
+        margin-bottom: 40px;
+        line-height: 1.3;
+    }
+
+    .quiz-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .option {
+        width: 450px;
+        height: 120px;
+        padding: 25px;
+        border: none;
+        border-radius: 25px;
+        font-size: 22px;
+        font-weight: 700;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.15s ease;
+        line-height: 1.4;
+    }
+
+    .option:hover {
+        transform: translateY(-6px);
+    }
+
+    .quiz-status {
+        margin-top: 25px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .quiz-next {
+        margin-top: 25px;
+        display: none;
+        background: #006aff;
+        color: white;
+        padding: 12px 28px;
+        border-radius: 12px;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .quiz-next:hover {
+        opacity: 0.8;
+    }
+
+    .option:nth-child(1) {
+        background: linear-gradient(90deg, #2f9e44, #8cd46a);
+    }
+
+    .option:nth-child(2) {
+        background: linear-gradient(90deg, #d79a00, #f1d36a);
+    }
+
+    .option:nth-child(3) {
+        background: linear-gradient(90deg, #d63939, #ff7b7b);
+    }
+
+    .option:nth-child(4) {
+        background: linear-gradient(90deg, #0353e9, #4e8aff);
+    }
+
+    .about-section {
+        color: white;
+        text-align: center;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .about-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        max-width: 1100px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        gap: 50px;
+    }
+
+    .about-box {
+        color: #ffffff;
+        padding: 35px;
+        border-radius: 30px;
+        max-width: 500px;
+        max-height: 650px;
+        font-size: 21px;
+        line-height: 1.5;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(135deg, #273373, #794e8f);
+        font-family: "Open Sauce", sans-serif;
+    }
+
+    .vision-box {
+        max-width: 550px;
+        color: #0a2b5a;
+        text-align: justify;
+        font-size: 21px;
+        line-height: 1.5;
+        font-family: "Open Sauce", sans-serif;
+    }
+
+    .about-box h2 {
+        font-size: 38px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .vision-box h1 {
+        font-size: 44px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #003764;
+        font-family: "Poppins", sans-serif;
+        text-align: left;
+    }
+
+    .info-section {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .info-container {
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    .info-card {
+        padding: 35px;
+        border-radius: 35px;
+        color: white;
+        line-height: 1.5;
+        font-size: 21px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .left-card {
+        background: linear-gradient(135deg, #273373, #794e8f);
+        width: 525px;
+    }
+
+    .right-card {
+        background: linear-gradient(135deg, #273373, #794e8f);
+        width: 525px;
+    }
+
+    .left-card p {
+        font-family: "Open Sauce", sans-serif;
+    }
+
+    .right-card strong {
+        font-family: "Open Sauce", sans-serif;
+        font-weight: 700;
+    }
+
+    .info-card h2 {
+        font-size: 33px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .info-card ul {
+        padding-left: 20px;
+    }
+
+    .info-card li {
+        margin-bottom: 21px;
+        font-family: "Open Sauce", sans-serif;
+    }
+
+    @font-face {
+        font-family: "DM Sans";
+        src: url("../font/DMSans-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "DM Sans";
+        src: url("../font/DMSans-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "DM Sans";
+        src: url("../font/DMSans-Bold.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Open Sauce";
+        src: url("../font/OpenSauceSans-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Open Sauce";
+        src: url("../font/OpenSauceSans-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Open Sauce";
+        src: url("../font/OpenSauceSans-Bold.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Poppins";
+        src: url("../font/Poppins-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Poppins";
+        src: url("../font/Poppins-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Poppins";
+        src: url("../font/Poppins-SemiBold.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Poppins";
+        src: url("../font/Poppins-Bold.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+    }
+
+
+    @media (max-width: 768px) {
+
+        /* NAVBAR */
+        .navbar {
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 20px;
+            gap: 10px;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        .nav-links {
+            flex-direction: row;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .logo img {
+            width: 55px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            margin-top: 5px;
+            border-top: 5px solid #eee;
+            padding-top: 8px;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            padding-bottom: 4px;
+        }
+
+        /* HERO */
+        .hero {
+            max-width: 92%;
+            margin: 20px auto;
+            padding: 28px 20px;
+            border-radius: 26px;
+            height: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .hero h1 {
+            font-size: 26px;
+            line-height: 1.35;
+            margin-bottom: 14px;
+        }
+
+        .hero h1 span {
+            font-size: 26px;
+        }
+
+        .hero p {
+            font-size: 14.5px;
+            line-height: 1.6;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .explore-btn {
+            margin-top: 22px;
+            width: 100%;
+            max-width: 260px;
+            height: auto;
+            padding: 14px 20px;
+            font-size: 15px;
+            border-radius: 40px;
+        }
+
+        /* CONTENT GRID → 2x2 */
+        .contents-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            padding: 0 14px;
+        }
+
+        .content-card {
+            padding: 14px 10px;
+            border-radius: 18px;
+            font-size: 13px;
+            min-height: 220px;
+            /* ⬅️ bikin lebih pendek */
+        }
+
+        .card-icon {
+            width: 60px;
+            margin-bottom: 8px;
+        }
+
+        .content-card h3 {
+            font-size: 13px;
+            line-height: 1.35;
+            margin-bottom: 8px;
+        }
+
+        .details-btn {
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 18px;
+        }
+
+        /* FLEX SECTION */
+        .diabetes-wrapper,
+        .chemical-section,
+        .detail-container,
+        .glp {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* TABLE */
+        .properties-table table {
+            width: 100%;
+            font-size: 16px;
+        }
+
+        /* GAME */
+        .games-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .option {
+            width: 100%;
+            height: auto;
+            font-size: 16px;
+        }
+
+        .quiz-options {
+            grid-template-columns: 1fr;
+        }
+
+        .reasons-section {
+            margin: 20px 15px;
+            padding: 25px 15px;
+            height: auto;
+            border-radius: 30px;
+            overflow: visible;
+            padding-bottom: 40px;
+        }
+
+        .contents-section {
+            padding-bottom: 100px;
+            overflow: visible;
+        }
+
+        .contents-section img {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            max-width: 100%;
+        }
+
+        .contents-section img,
+        .detailintro-header,
+        .detaildiabet-header,
+        .detailjuan-header {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .card {
+            padding: 18px;
+        }
+
+        .card img {
+            width: 70px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+        }
+
+        .card p {
+            font-size: 14px;
+        }
+
+        .games-section {
+            padding: 0 14px;
+            /* ⬅️ jarak aman dari pinggir */
+        }
+
+        .games-grid {
+            gap: 14px;
+            /* jarak antar card sedikit diperkecil */
+        }
+
+        .game-card {
+            padding: 14px;
+            border-radius: 18px;
+        }
+
+        .game-card h3 {
+            font-size: 15px;
+        }
+
+        .game-card p {
+            font-size: 12.5px;
+        }
+
+        .about-section {
+            padding: 16px;
+        }
+
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Card utama */
+        .about-box,
+        .vision-box {
+            background: linear-gradient(180deg, #4b3f8c, #6a55a3);
+            color: #fff;
+            padding: 18px 16px;
+            border-radius: 18px;
+            max-width: 520px;
+            margin: 0 auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Judul */
+        .about-box h2,
+        .vision-box h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Paragraf */
+        .about-box p,
+        .vision-box p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .info-section {
+            padding: 16px 14px;
+        }
+
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Card utama */
+        .info-card {
+            background: linear-gradient(180deg, #4b3f8c, #6a55a3);
+            color: #fff;
+            padding: 16px 14px;
+            border-radius: 18px;
+            width: 100%;
+            max-width: calc(100vw - 28px);
+            margin: 0 auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+        }
+
+        .info-card h2 {
+            font-size: 18px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        .info-card p,
+        .info-card li {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .info-card ul {
+            padding-left: 18px;
+        }
+
+        .info-card li {
+            margin-bottom: 10px;
+        }
+
+        /* Variasi warna */
+        .left-card,
+        .right-card {
+            background: linear-gradient(135deg, #273373, #794e8f);
+        }
+
+        /* ==== SECTION WRAPPER ==== */
+        .detailintro {
+            padding: 14px 14px 28px;
+        }
+
+        /* ==== HEADER IMAGE ==== */
+        .detailintro-header {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            margin-bottom: 14px;
+        }
+
+        /* ==== MAIN TITLE ==== */
+        .detailintro h1 {
+            font-size: clamp(20px, 5.5vw, 26px);
+            line-height: 1.25;
+            font-weight: 700;
+            color: #0a2540;
+            margin: 10px 0 18px;
+            text-align: left;
+        }
+
+        /* ==== ARTICLE CONTAINER ==== */
+        .detailintro-article {
+            background: #ffffff;
+            padding: 16px;
+            border-radius: 18px;
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        /* ==== PARAGRAPH ==== */
+        .detailintro-article p {
+            font-size: 15px;
+            line-height: 1.75;
+            color: #24364b;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        /* ==== SUBTITLE ==== */
+        .detailintro-article h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a3a8b;
+            margin: 22px 0 12px;
+            line-height: 1.35;
+        }
+
+        /* ==== IMAGE IN ARTICLE ==== */
+        .detailintro-article img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            margin: 14px 0 18px;
+            display: block;
+        }
+
+        /* ==== BETTER TEXT READABILITY ==== */
+        .detailintro-article p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ==== NAVBAR MOBILE (AMAN BEZEL) ==== */
+        .navbar {
+            padding: 10px 14px;
+        }
+
+        .nav-links {
+            gap: 14px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+        }
+
+        /* ==== SECTION WRAPPER ==== */
+        .detaildiabet {
+            padding: 14px 14px 30px;
+        }
+
+        /* ==== HEADER IMAGE ==== */
+        .detaildiabet-header {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            margin-bottom: 14px;
+        }
+
+        /* ==== ARTICLE CARD ==== */
+        .detaildiabet-article {
+            background: #ffffff;
+            padding: 16px;
+            border-radius: 18px;
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+            margin-bottom: 18px;
+        }
+
+        /* ==== MAIN TITLE ==== */
+        .detaildiabet-article h1 {
+            font-size: clamp(20px, 5.5vw, 26px);
+            line-height: 1.3;
+            font-weight: 700;
+            color: #0a2540;
+            margin: 6px 0 14px;
+        }
+
+        /* ==== PARAGRAPH ==== */
+        .detaildiabet-article p {
+            font-size: 15px;
+            line-height: 1.75;
+            color: #24364b;
+            margin-bottom: 14px;
+        }
+
+        /* ==== DIABETES INTRO BOX ==== */
+        .diabetes-wrapper {
+            margin: 0 0 18px;
+        }
+
+        .diabetes-text {
+            background: linear-gradient(135deg, #273373, #794e8f);
+            color: #ffffff;
+            padding: 16px;
+            border-radius: 18px;
+            font-size: 15px;
+            line-height: 1.7;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .diabetes-text p {
+            margin: 0;
+        }
+
+        /* ==== LIST ==== */
+        .detaildiabet-article ul {
+            padding-left: 18px;
+            margin: 12px 0;
+        }
+
+        .detaildiabet-article li {
+            margin-bottom: 12px;
+        }
+
+        .detaildiabet-article li p {
+            margin: 0;
+        }
+
+        /* ==== IMAGES IN ARTICLE ==== */
+        .detaildiabet-hero {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            margin: 14px 0;
+            display: block;
+        }
+
+        /* ==== REMOVE EXCESSIVE <br> EFFECT ==== */
+        .detaildiabet-article br {
+            display: none;
+        }
+
+        /* ==== NAVBAR MOBILE SAFE ==== */
+        .navbar {
+            padding: 10px 14px;
+        }
+
+        .nav-links {
+            gap: 14px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+        }
+
+        /* =========================
+        MOBILE FIX (DETAILJUAN)
+        ========================= */
+
+        /* Anti horizontal scroll */
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        /* SECTION WRAPPER */
+        .detailjuan {
+            padding: 14px;
+            width: 100%;
+        }
+
+        /* =========================
+        GLP SECTION
+        ========================= */
+        .glp {
+            padding: 20px 14px;
+            width: 100%;
+        }
+
+        /* Paksa jadi 1 kolom */
+        .glp {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* =========================
+        INFO LEFT (KEY + DISCLAIMER)
+        ========================= */
+        .info-left {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto 24px;
+        }
+
+        .info-left .box {
+            width: 100%;
+            height: auto;
+            padding: 14px;
+        }
+
+        .info-left img {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+        }
+
+        /* =========================
+        STEPS
+        ========================= */
+        .steps-right {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .step {
+            width: 100%;
+        }
+
+        .step img {
+            width: 72px;
+        }
+
+        /* BUTTON */
+        .step-btn {
+            font-size: 14px;
+            padding: 12px;
+        }
+
+    }
